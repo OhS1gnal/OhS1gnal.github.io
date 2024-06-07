@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JagtFyn</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            background: rgb(49, 49, 49);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .text {
+            text-align: center;
+            flex-grow: 1;
+        }
+        .text h1 {
+            color: white;
+            text-shadow: 0 8px 16px black;
+        }
+        .text img {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        .reklame1, .reklame2 {
+            width: 10%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="reklame2" class="reklame2" src="reklame2.png">
+        <div class="text">
+            <h1>Se dit skema her &#128512;</h1>
+            <img src="skema.png">
+        </div>
+        <img id="reklame1" class="reklame1" src="reklame1.png">
+    </div>
+</body>
+</html>
