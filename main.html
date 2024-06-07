@@ -38,28 +38,37 @@
             height: auto;
             margin-top: 20px;
         }
-        .reklame1, .reklame2 {
-            width: 100%;
-            height: 100%; 
-            padding-top: 70px;
+        .reklame {
+            position: relative;
+            width: 10%;
         }
-        .reklame1, .reklame1{
-            width: 125px;
-            height: 547px;
-
+        .reklame::before {
+            content: "";
+            display: block;
+            padding-top: 437.6%;
+        }
+        .reklame img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
-    <!--125 x 547-->
 </head>
 <body>
     <div class="container">
-        <p><a href="https://www.roblox.com/games/13476966119/Buckingham-Palace"><img id="reklame2" class="reklame2" src="reklame2.png"></a></p>
+        <div class="reklame">
+            <a href="https://www.roblox.com/games/13476966119/Buckingham-Palace"><img src="reklame2.png" alt="Reklame 2"></a>
+        </div>
         <div class="text">
             <h1>Se dit skema her &#128512;</h1>
-            <img src="skema.png">
+            <img src="skema.png" alt="Skema">
         </div>
-        <p><a href="https://www.roblox.com/groups/7109020/ROBLOX-Community-Church#!/about"><img id="reklame1" class="reklame1" src="reklame1.png">
-            </a></p>
+        <div class="reklame">
+            <a href="https://www.roblox.com/groups/7109020/ROBLOX-Community-Church#!/about"><img src="reklame1.png" alt="Reklame 1"></a>
+        </div>
     </div>
 </body>
 </html>
