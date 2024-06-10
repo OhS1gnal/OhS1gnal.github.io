@@ -64,6 +64,8 @@
            opacity: .7;
        }
     </style>
+
+    <!-- Script der encrypter passworded i vores kode med hash -->
     <script type="text/javascript" src="sha256.js"></script>
     <script>
         function checkInputs(event) {
@@ -72,14 +74,13 @@
             var name = document.getElementById('name').value.trim();
             var password = document.getElementById('password').value.trim();
 
-            var setName = 'jagt';
-            var setPasswordHash = 'b2694196372ebcdb4c606ef63f230862a01b6cd8abd6995ccc0271f89def71ed';
+            var setName = 'jagt'; // Datatype string
+            var setPasswordHash = 'b2694196372ebcdb4c606ef63f230862a01b6cd8abd6995ccc0271f89def71ed'; // Datatype string
 
-            var shaObj = new jsSHA("SHA-256", "TEXT");
+            var shaObj = new jsSHA("SHA-256", "TEXT"); // Datatype objekt
             shaObj.update(password);
             var hash = shaObj.getHash("HEX");
 
-            // For debugging
             console.log("Entered password:", password);
             console.log("Computed hash:", hash);
 
@@ -90,12 +91,14 @@
             }
         }
 
+        // Event listener for at udføre kode, når dokumentet er fuldt indlæst.
         document.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById('loginForm').addEventListener('submit', checkInputs);
         });
     </script>
 </head>
 <body>
+    <!-- Laver vores login boks -->
     <div class="container">
         <form id="loginForm">
            <h1>Skriv login fra instruktør</h1>
