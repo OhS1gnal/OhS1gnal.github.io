@@ -40,12 +40,12 @@
         }
         .reklame {
             position: relative;
-            width: 10%;
+            width: 10%; /* Adjust this percentage to change the width of the ads */
         }
         .reklame::before {
             content: "";
             display: block;
-            padding-top: 437.6%;
+            padding-top: 437.6%; /* Aspect ratio (height/width * 100%) => 547 / 125 * 100 */
         }
         .reklame img {
             position: absolute;
@@ -59,15 +59,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="reklame">
-            <a href="https://www.roblox.com/games/13476966119/Buckingham-Palace"><img src="reklame2.png" alt="Reklame 2"></a>
-        </div>
         <div class="text">
             <h1>Se dit skema her &#128512;</h1>
             <img src="skema.png" alt="Skema">
-        </div>
-        <div class="reklame">
-            <a href="https://www.roblox.com/groups/7109020/ROBLOX-Community-Church#!/about"><img src="reklame1.png" alt="Reklame 1"></a>
         </div>
     </div>
 </body>
